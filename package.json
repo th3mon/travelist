@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --watch",
     "check-types": "tsc --noemit",
     "lint": "next lint && npm run check-types",
     "lint:fix": "next lint --fix",
