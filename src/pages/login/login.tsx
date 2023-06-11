@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, useFormStore } from '@ariakit/react';
+import { Button, Form, Heading, HeadingLevel, useFormStore } from '@ariakit/react';
 
 export const Login: React.FunctionComponent = function () {
   const form = useFormStore({
@@ -12,11 +12,14 @@ export const Login: React.FunctionComponent = function () {
   return (
     <div className="login-page w-1/2" data-testid="login-page">
       <Form store={form} aria-labelledby="sign-in-into-the-app" data-testid="login-form">
-        <header>
-          <h1 id="sign-in-into-the-app" className="text-header-h1 text-right text-6xl font-sans">
+        <HeadingLevel>
+          <Heading
+            id="sign-in-into-the-app"
+            className="text-header-h1 text-right text-6xl font-sans"
+          >
             Hi there!
-          </h1>
-        </header>
+          </Heading>
+        </HeadingLevel>
 
         <div className="flex flex-col text-xl" data-testid="login-field">
           <label className="text-input-label" htmlFor="login">
