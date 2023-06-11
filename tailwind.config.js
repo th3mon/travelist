@@ -16,6 +16,9 @@ module.exports = {
           h1: '#6293e4',
         },
       },
+      fontFamily: {
+        sans: ['Recursive', 'Helvetica', 'Arial', 'sans-serif'],
+      },
     },
   },
   plugins: [],
