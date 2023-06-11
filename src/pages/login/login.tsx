@@ -19,6 +19,16 @@ export const Login: React.FunctionComponent = function () {
     },
   });
 
+  form.useValidate(() => {
+    if (!form.getValue('email')) {
+      form.setError('email', 'Login field is required');
+    }
+
+    if (!form.getValue('password')) {
+      form.setError('password', 'Password field is required');
+    }
+  });
+
   return (
     <div className="login-page w-1/2" data-testid="login-page">
       <Form
