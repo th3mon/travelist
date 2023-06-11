@@ -13,7 +13,9 @@ export const Login: React.FunctionComponent = function () {
     <div className="login-page w-1/2" data-testid="login-page">
       <Form store={form} aria-labelledby="sign-in-into-the-app" data-testid="login-form">
         <header>
-          <h1 id="sign-in-into-the-app">Hi there!</h1>
+          <h1 id="sign-in-into-the-app" className="text-header-h1 text-right text-6xl font-sans">
+            Hi there!
+          </h1>
         </header>
 
         <div className="flex flex-col text-xl" data-testid="login-field">
