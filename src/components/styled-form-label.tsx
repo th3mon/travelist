@@ -1,25 +1,17 @@
 import React from 'react';
-import { FormLabel } from '@ariakit/react';
-import { StringLike } from '@ariakit/core/esm/form/types';
+import { Children } from './children';
+import { addClassToNode } from './add-class-to-node';
 
 type StyledFormLabelProps = {
-  name: StringLike;
-  children: JSX.Element[] | JSX.Element | string;
+  children: Children;
   className?: string;
-  props?: Record<string, never>;
 };
 export const StyledFormLabel: React.FunctionComponent<StyledFormLabelProps> = ({
-  name,
   children,
   className,
-  ...props
 }) => {
   const defaultClassName = 'text-input-label';
   const classNamesWithDefault = [defaultClassName, className].join(' ');
 
-  return (
-    <FormLabel name={name} className={classNamesWithDefault} {...props}>
-      {children}
-    </FormLabel>
-  );
+  return addClassToNode(children, classNamesWithDefault);
 };

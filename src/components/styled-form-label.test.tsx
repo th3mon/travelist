@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { FormComponent } from './form.mock';
 import { StyledFormLabel } from './styled-form-label';
 
 describe('StyledFormLabel', () => {
@@ -8,40 +7,33 @@ describe('StyledFormLabel', () => {
   });
 
   it('should render', () => {
-    const name = 'Label';
-
     render(
-      <FormComponent>
-        <StyledFormLabel name={name}>Label</StyledFormLabel>
-      </FormComponent>
+      <StyledFormLabel>
+        <label>Label</label>
+      </StyledFormLabel>
     );
   });
 
   it('should render with default class name', async () => {
-    const name = 'Label';
-
     render(
-      <FormComponent>
-        <StyledFormLabel name={name}>Label</StyledFormLabel>
-      </FormComponent>
+      <StyledFormLabel>
+        <label>Label</label>
+      </StyledFormLabel>
     );
 
-    const styledFormLabel = await screen.findByText(name);
+    const styledFormLabel = await screen.findByText(/label/i);
 
     expect(styledFormLabel).toHaveClass('text-input-label');
   });
-  it('should render with custom className', () => {
-    const name = 'Label';
 
+  it('should render with custom className', () => {
     render(
-      <FormComponent>
-        <StyledFormLabel name={name} className="custom-class">
-          Label
-        </StyledFormLabel>
-      </FormComponent>
+      <StyledFormLabel className="custom-class">
+        <label>Label</label>
+      </StyledFormLabel>
     );
 
-    const styledFormLabel = screen.getByText(name);
+    const styledFormLabel = screen.getByText(/label/i);
 
     expect(styledFormLabel).toHaveClass('custom-class');
   });

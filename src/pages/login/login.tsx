@@ -5,6 +5,7 @@ import {
   FormError,
   FormGroup,
   FormInput,
+  FormLabel,
   HeadingLevel,
   useFormStore,
 } from '@ariakit/react';
@@ -36,7 +37,9 @@ export const Login: React.FunctionComponent = function () {
         </HeadingLevel>
 
         <FormGroup className="login-form__field flex flex-col text-xl" data-testid="login-field">
-          <StyledFormLabel name={form.names.email}>login</StyledFormLabel>
+          <StyledFormLabel>
+            <FormLabel name={form.names.email}>login</FormLabel>
+          </StyledFormLabel>
           <StyledFormInput>
             <FormInput name={form.names.email} placeholder="John.Doe@email.com" required />
           </StyledFormInput>
@@ -48,7 +51,9 @@ export const Login: React.FunctionComponent = function () {
         </FormGroup>
 
         <FormGroup className="login-form__field flex flex-col text-xl" data-testid="password-field">
-          <StyledFormLabel name={form.names.password}>password</StyledFormLabel>
+          <StyledFormLabel>
+            <FormLabel name={form.names.password}>password</FormLabel>
+          </StyledFormLabel>
           <StyledFormInput>
             <FormInput name={form.names.password} type="password" placeholder="password" required />
           </StyledFormInput>
