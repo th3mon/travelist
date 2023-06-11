@@ -1,8 +1,9 @@
 import React from 'react';
 import { Heading } from '@ariakit/react';
+import { Children } from './children';
 
 type StyledHeadingProps = {
-  children: JSX.Element[] | JSX.Element | string;
+  children: Children;
   className?: string;
   id?: string;
 };
