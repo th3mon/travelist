@@ -1,19 +1,7 @@
 import { render, screen } from '@testing-library/react';
+import { FormComponent } from './form.mock';
 import { StyledFormLabel } from './styled-form-label';
-import { Form, useFormStore } from '@ariakit/react';
-import React from 'react';
 
-const FormComponent: React.FunctionComponent<{
-  children: JSX.Element[] | JSX.Element | string;
-}> = ({ children }) => {
-  const form = useFormStore({
-    defaultValues: {
-      name: 'John Doe',
-    },
-  });
-
-  return <Form store={form}>{children}</Form>;
-};
 describe('StyledFormLabel', () => {
   it('should exist', () => {
     expect(StyledFormLabel).toBeDefined();
