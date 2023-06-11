@@ -1,5 +1,15 @@
 import React from 'react';
-import { Button, Form, Heading, HeadingLevel, useFormStore } from '@ariakit/react';
+import {
+  Button,
+  Form,
+  FormError,
+  FormGroup,
+  FormInput,
+  FormLabel,
+  Heading,
+  HeadingLevel,
+  useFormStore,
+} from '@ariakit/react';
 
 export const Login: React.FunctionComponent = function () {
   const form = useFormStore({
@@ -26,29 +36,43 @@ export const Login: React.FunctionComponent = function () {
           </Heading>
         </HeadingLevel>
 
-        <div className="login-form__field flex flex-col text-xl" data-testid="login-field">
-          <label className="text-input-label" htmlFor="login">
+        <FormGroup className="login-form__field flex flex-col text-xl" data-testid="login-field">
+          <FormLabel name={form.names.email} className="text-input-label">
             login
-          </label>
-          <input
+          </FormLabel>
+          <FormInput
             className="bg-input-bg text-input-text p-4 rounded"
-            type="text"
-            name="login"
-            id="login"
+            name={form.names.email}
+            placeholder="John.Doe@email.com"
+            required
           />
-        </div>
+          <FormError
+            name={form.names.email}
+            className="text-red-400"
+            data-testid="login-form__error-message-login"
+          >
+            Login field is required
+          </FormError>
+        </FormGroup>
 
-        <div className="login-form__field flex flex-col text-xl" data-testid="password-field">
-          <label className="text-input-label" htmlFor="password">
+        <FormGroup className="login-form__field flex flex-col text-xl" data-testid="password-field">
+          <FormLabel name={form.names.password} className="text-input-label">
             password
-          </label>
-          <input
+          </FormLabel>
+          <FormInput
             className="bg-input-bg text-input-text p-4 rounded"
             type="password"
-            name="password"
-            id="password"
+            name={form.names.password}
+            required
           />
-        </div>
+          <FormError
+            name={form.names.password}
+            className="text-red-400"
+            data-testid="login-form__error-message-password"
+          >
+            Password field is required
+          </FormError>
+        </FormGroup>
 
         <Button
           className="login-form__button bg-primary w-full text-xl py-4 text-center rounded hover:bg-primary-lighter text-light"
