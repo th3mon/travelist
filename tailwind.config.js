@@ -12,9 +12,7 @@ module.exports = {
           bg: '#ededee',
           label: '#6293e4',
         },
-        header: {
-          h1: '#6293e4',
-        },
+        header: '#6293e4',
       },
       fontFamily: {
         sans: ['Recursive', 'Helvetica', 'Arial', 'sans-serif'],

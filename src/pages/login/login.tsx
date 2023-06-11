@@ -6,10 +6,10 @@ import {
   FormGroup,
   FormInput,
   FormLabel,
-  Heading,
   HeadingLevel,
   useFormStore,
 } from '@ariakit/react';
+import { StyledHeading } from './components/styled-heading';
 
 export const Login: React.FunctionComponent = function () {
   const form = useFormStore({
@@ -28,12 +28,12 @@ export const Login: React.FunctionComponent = function () {
         data-testid="login-form"
       >
         <HeadingLevel>
-          <Heading
+          <StyledHeading
+            className="login-form__header text-right text-6xl"
             id="sign-in-into-the-app"
-            className="login-form__header text-header-h1 text-right text-6xl font-sans"
           >
             Hi there!
-          </Heading>
+          </StyledHeading>
         </HeadingLevel>
 
         <FormGroup className="login-form__field flex flex-col text-xl" data-testid="login-field">
