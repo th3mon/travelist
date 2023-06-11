@@ -5,11 +5,10 @@ import {
   FormError,
   FormGroup,
   FormInput,
-  FormLabel,
   HeadingLevel,
   useFormStore,
 } from '@ariakit/react';
-import { StyledHeading } from './components/styled-heading';
+import { StyledFormLabel, StyledHeading } from '@/components';
 
 export const Login: React.FunctionComponent = function () {
   const form = useFormStore({
@@ -37,9 +36,7 @@ export const Login: React.FunctionComponent = function () {
         </HeadingLevel>
 
         <FormGroup className="login-form__field flex flex-col text-xl" data-testid="login-field">
-          <FormLabel name={form.names.email} className="text-input-label">
-            login
-          </FormLabel>
+          <StyledFormLabel name={form.names.email}>login</StyledFormLabel>
           <FormInput
             className="bg-input-bg text-input-text p-4 rounded"
             name={form.names.email}
@@ -50,15 +47,11 @@ export const Login: React.FunctionComponent = function () {
             name={form.names.email}
             className="text-red-400"
             data-testid="login-form__error-message-login"
-          >
-            Login field is required
-          </FormError>
+          />
         </FormGroup>
 
         <FormGroup className="login-form__field flex flex-col text-xl" data-testid="password-field">
-          <FormLabel name={form.names.password} className="text-input-label">
-            password
-          </FormLabel>
+          <StyledFormLabel name={form.names.password}>password</StyledFormLabel>
           <FormInput
             className="bg-input-bg text-input-text p-4 rounded"
             type="password"
@@ -69,9 +62,7 @@ export const Login: React.FunctionComponent = function () {
             name={form.names.password}
             className="text-red-400"
             data-testid="login-form__error-message-password"
-          >
-            Password field is required
-          </FormError>
+          />
         </FormGroup>
 
         <Button

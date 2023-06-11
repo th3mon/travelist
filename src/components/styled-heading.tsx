@@ -12,7 +12,7 @@ export const StyledHeading: React.FunctionComponent<StyledHeadingProps> = ({
   id,
 }): JSX.Element => {
   const defaultClassNames = 'text-header font-sans';
-  const classNameWithDefaults = `${className ? `${className} ` : ''}${defaultClassNames}`;
+  const classNameWithDefaults = [defaultClassNames, className].join(' ');
 
   return (
     <Heading className={classNameWithDefaults} id={id}>
