@@ -11,17 +11,22 @@ export const Login: React.FunctionComponent = function () {
 
   return (
     <div className="login-page w-1/2" data-testid="login-page">
-      <Form store={form} aria-labelledby="sign-in-into-the-app" data-testid="login-form">
+      <Form
+        className="login-form"
+        store={form}
+        aria-labelledby="sign-in-into-the-app"
+        data-testid="login-form"
+      >
         <HeadingLevel>
           <Heading
             id="sign-in-into-the-app"
-            className="text-header-h1 text-right text-6xl font-sans"
+            className="login-form__header text-header-h1 text-right text-6xl font-sans"
           >
             Hi there!
           </Heading>
         </HeadingLevel>
 
-        <div className="flex flex-col text-xl" data-testid="login-field">
+        <div className="login-form__field flex flex-col text-xl" data-testid="login-field">
           <label className="text-input-label" htmlFor="login">
             login
           </label>
@@ -33,7 +38,7 @@ export const Login: React.FunctionComponent = function () {
           />
         </div>
 
-        <div className="flex flex-col text-xl" data-testid="password-field">
+        <div className="login-form__field flex flex-col text-xl" data-testid="password-field">
           <label className="text-input-label" htmlFor="password">
             password
           </label>
@@ -46,7 +51,7 @@ export const Login: React.FunctionComponent = function () {
         </div>
 
         <Button
-          className="login-button bg-primary w-full text-xl py-4 text-center rounded hover:bg-primary-lighter text-light"
+          className="login-form__button bg-primary w-full text-xl py-4 text-center rounded hover:bg-primary-lighter text-light"
           type="submit"
           data-testid="login-button"
         >
