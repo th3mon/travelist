@@ -1,12 +1,8 @@
 import React from 'react';
-import { Children } from './children';
 import { addClassToNode } from './add-class-to-node';
+import { StyledComponent } from './styled.component';
 
-type StyledFormInputProps = {
-  children: Children;
-  className?: string;
-};
-export const StyledFormInput: React.FunctionComponent<StyledFormInputProps> = ({
+export const StyledFormInput: React.FunctionComponent<StyledComponent> = ({
   children,
   className,
 }) => {

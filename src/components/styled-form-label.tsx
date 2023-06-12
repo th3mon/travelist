@@ -1,12 +1,8 @@
 import React from 'react';
-import { Children } from './children';
 import { addClassToNode } from './add-class-to-node';
+import { StyledComponent } from './styled.component';
 
-type StyledFormLabelProps = {
-  children: Children;
-  className?: string;
-};
-export const StyledFormLabel: React.FunctionComponent<StyledFormLabelProps> = ({
+export const StyledFormLabel: React.FunctionComponent<StyledComponent> = ({
   children,
   className,
 }) => {
