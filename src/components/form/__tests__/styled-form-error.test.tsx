@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { StyledFormError } from './styled-form-error';
+import { StyledFormError } from '@/components';
 
 describe('StyledFormError', () => {
   it('should exist', () => {

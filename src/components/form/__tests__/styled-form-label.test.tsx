@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { StyledFormLabel } from './styled-form-label';
+import { StyledFormLabel } from '@/components';
 
 describe('StyledFormLabel', () => {
   it('should exist', () => {

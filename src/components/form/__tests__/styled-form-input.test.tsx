@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { StyledFormInput } from './styled-form-input';
+import { StyledFormInput } from '@/components';
 
 describe('StyledFormInput', () => {
   it('should exist', () => {

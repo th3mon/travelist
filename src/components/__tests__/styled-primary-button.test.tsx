@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { StyledPrimaryButton } from './styled-primary-button';
+import { StyledPrimaryButton } from '@/components';
 
 describe('StyledFormLabel', () => {
   it('should exist', () => {

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { StyledHeading } from './styled-heading';
+import { StyledHeading } from '@/components';
 
 describe('StyledHeading', () => {
   it('should exist', () => {
