@@ -9,7 +9,13 @@ import {
   HeadingLevel,
   useFormStore,
 } from '@ariakit/react';
-import { StyledFormError, StyledFormInput, StyledFormLabel, StyledHeading } from '@/components';
+import {
+  StyledFormError,
+  StyledFormInput,
+  StyledFormLabel,
+  StyledHeading,
+  StyledPrimaryButton,
+} from '@/components';
 
 export const Login: React.FunctionComponent = function () {
   const form = useFormStore({
@@ -73,13 +79,11 @@ export const Login: React.FunctionComponent = function () {
           </StyledFormError>
         </FormGroup>
 
-        <Button
-          className="login-form__button bg-primary w-full text-xl py-4 text-center rounded hover:bg-primary-lighter text-light"
-          type="submit"
-          data-testid="login-button"
-        >
-          Sign in
-        </Button>
+        <StyledPrimaryButton>
+          <Button type="submit" data-testid="login-button">
+            Sign in
+          </Button>
+        </StyledPrimaryButton>
       </Form>
     </div>
   );
