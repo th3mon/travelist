@@ -94,3 +94,5 @@ export const Login: React.FunctionComponent = function () {
     </div>
   );
 };
+
+export default Login;
