@@ -9,7 +9,7 @@ import {
   HeadingLevel,
   useFormStore,
 } from '@ariakit/react';
-import { StyledFormLabel, StyledFormInput, StyledHeading } from '@/components';
+import { StyledFormError, StyledFormInput, StyledFormLabel, StyledHeading } from '@/components';
 
 export const Login: React.FunctionComponent = function () {
   const form = useFormStore({
@@ -53,11 +53,9 @@ export const Login: React.FunctionComponent = function () {
           <StyledFormInput>
             <FormInput name={form.names.email} placeholder="John.Doe@email.com" required />
           </StyledFormInput>
-          <FormError
-            name={form.names.email}
-            className="text-red-400"
-            data-testid="login-form__error-message-login"
-          />
+          <StyledFormError>
+            <FormError name={form.names.email} data-testid="login-form__error-message-login" />
+          </StyledFormError>
         </FormGroup>
 
         <FormGroup className="login-form__field flex flex-col text-xl" data-testid="password-field">
@@ -67,11 +65,12 @@ export const Login: React.FunctionComponent = function () {
           <StyledFormInput>
             <FormInput name={form.names.password} type="password" placeholder="password" required />
           </StyledFormInput>
-          <FormError
-            name={form.names.password}
-            className="text-red-400"
-            data-testid="login-form__error-message-password"
-          />
+          <StyledFormError>
+            <FormError
+              name={form.names.password}
+              data-testid="login-form__error-message-password"
+            />
+          </StyledFormError>
         </FormGroup>
 
         <Button
