@@ -7,7 +7,7 @@ export const StyledFormError: React.FunctionComponent<StyledComponent> = ({
   children,
   className,
 }) => {
-  const defaultClassName = 'text-red-400';
+  const defaultClassName = 'text-red-400 empty:pt-7';
 
   return addClassToNode(children, classNamesWithDefault(defaultClassName, className));
 };
