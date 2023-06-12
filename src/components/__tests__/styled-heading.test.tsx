@@ -30,9 +30,7 @@ describe('StyledHeading', () => {
 
   it('should have a given class names', async () => {
     const customClassNames = ['text-red-500', 'font-sans-serif', 'font-bold'];
-    const { container } = render(
-      <StyledHeading className={customClassNames.join(' ')}>Heading</StyledHeading>
-    );
+    render(<StyledHeading className={customClassNames.join(' ')}>Heading</StyledHeading>);
 
     const styledHeading = await screen.findByText('Heading');
 
