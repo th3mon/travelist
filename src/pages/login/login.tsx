@@ -38,7 +38,7 @@ export const Login: React.FunctionComponent = function () {
   return (
     <div className="login-page w-1/2" data-testid="login-page">
       <Form
-        className="login-form"
+        className="login-form flex flex-col gap-8"
         store={form}
         aria-labelledby="sign-in-into-the-app"
         data-testid="login-form"
@@ -52,7 +52,10 @@ export const Login: React.FunctionComponent = function () {
           </StyledHeading>
         </HeadingLevel>
 
-        <FormGroup className="login-form__field flex flex-col text-xl" data-testid="login-field">
+        <FormGroup
+          className="login-form__field flex flex-col text-xl gap-1"
+          data-testid="login-field"
+        >
           <StyledFormLabel>
             <FormLabel name={form.names.email}>login</FormLabel>
           </StyledFormLabel>
@@ -64,7 +67,10 @@ export const Login: React.FunctionComponent = function () {
           </StyledFormError>
         </FormGroup>
 
-        <FormGroup className="login-form__field flex flex-col text-xl" data-testid="password-field">
+        <FormGroup
+          className="login-form__field flex flex-col text-xl gap-1"
+          data-testid="password-field"
+        >
           <StyledFormLabel>
             <FormLabel name={form.names.password}>password</FormLabel>
           </StyledFormLabel>
