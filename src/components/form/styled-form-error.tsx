@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyledComponent } from './styled.component';
-import { addClassToNode } from './add-class-to-node';
-import { classNamesWithDefault } from './class-names-with-default';
+import { StyledComponent } from '../styled.component';
+import { addClassToNode } from '../add-class-to-node';
+import { classNamesWithDefault } from '../class-names-with-default';
 
 export const StyledFormError: React.FunctionComponent<StyledComponent> = ({
   children,
