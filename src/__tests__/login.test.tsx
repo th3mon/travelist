@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-
-import { Login } from '@/pages/login/login';
+import Login from '@/pages/login';
 
 describe('Login Page', () => {
   it('should exist', () => {
