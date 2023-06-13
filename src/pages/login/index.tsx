@@ -3,7 +3,6 @@ import {
   Button,
   Form,
   FormError,
-  FormGroup,
   FormInput,
   FormLabel,
   HeadingLevel,
@@ -11,6 +10,7 @@ import {
 } from '@ariakit/react';
 import {
   StyledFormError,
+  StyledFormGroup,
   StyledFormInput,
   StyledFormLabel,
   StyledHeading,
@@ -52,10 +52,7 @@ export const Login: React.FunctionComponent = function () {
           </StyledHeading>
         </HeadingLevel>
 
-        <FormGroup
-          className="login-form__field flex flex-col text-xl gap-1"
-          data-testid="login-field"
-        >
+        <StyledFormGroup className="login-form__field" data-testid="login-field">
           <StyledFormLabel>
             <FormLabel name={form.names.email}>login</FormLabel>
           </StyledFormLabel>
@@ -65,12 +62,9 @@ export const Login: React.FunctionComponent = function () {
           <StyledFormError>
             <FormError name={form.names.email} data-testid="login-form__error-message-login" />
           </StyledFormError>
-        </FormGroup>
+        </StyledFormGroup>
 
-        <FormGroup
-          className="login-form__field flex flex-col text-xl gap-1"
-          data-testid="password-field"
-        >
+        <StyledFormGroup className="login-form__field" data-testid="password-field">
           <StyledFormLabel>
             <FormLabel name={form.names.password}>password</FormLabel>
           </StyledFormLabel>
@@ -83,7 +77,7 @@ export const Login: React.FunctionComponent = function () {
               data-testid="login-form__error-message-password"
             />
           </StyledFormError>
-        </FormGroup>
+        </StyledFormGroup>
 
         <StyledPrimaryButton>
           <Button type="submit" data-testid="login-button">
