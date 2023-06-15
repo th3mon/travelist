@@ -13,9 +13,13 @@ module.exports = {
           label: '#6293e4',
         },
         header: '#6293e4',
+        bg: '#1e2a48',
       },
       fontFamily: {
         sans: ['Recursive', 'Helvetica', 'Arial', 'sans-serif'],
+      },
+      rotate: {
+        10: '10deg',
       },
     },
   },

@@ -34,18 +34,68 @@ export const Login: React.FunctionComponent = function () {
       form.setError('password', 'Password field is required');
     }
   });
-
+  // after:block after:absolute after:inset-y-0 after:right-0 after:w-1/2 after:bg-bg after:rotate-42
+  // before:block before:absolute before:inset-y-0 before:left-0 before:w-8/12 before:bg-cover before:bg-[url(https://source.unsplash.com/1600x900/?space,star,galaxy)]
   return (
-    <div className="login-page w-1/2" data-testid="login-page">
+    <div
+      className="
+        login-page
+        relative
+        min-h-screen
+        md:m-auto
+        md:min-w-full
+        md:overflow-hidden
+      "
+      data-testid="login-page"
+    >
+      <div
+        className="
+        block absolute bg-cover bg-[url(https://source.unsplash.com/1600x900/?space,star,galaxy)]
+        bottom-0 top-0 left-0 right-0
+        z-10
+        lg:inset-y-0 lg:left-0 lg:w-8/12
+      "
+      ></div>
+      <div
+        className="
+        block
+        lg:absolute
+        z-20
+        top-0
+        bottom-1/4
+        left-0
+        right-0
+        bg-bg
+        lg:-top-[200%]
+        lg:-bottom-[200%]
+        md:w-3/5
+        lg:-right-20
+        lg:w-1/2
+        lg:rotate-10
+      "
+      ></div>
       <Form
-        className="login-form flex flex-col gap-8"
+        className="
+          login-form flex flex-col gap-8
+          p-5
+          pb-10
+          z-20
+          bg-bg
+          relative
+          lg:inset-y-20
+          lg:right-20 lg:w-2/3 lg:translate-x-[auto] lg:left-auto
+        "
         store={form}
         aria-labelledby="sign-in-into-the-app"
         data-testid="login-form"
       >
         <HeadingLevel>
           <StyledHeading
-            className="login-form__header text-right text-6xl"
+            className="
+              login-form__header
+              text-6xl
+              md:text-right
+            "
             id="sign-in-into-the-app"
           >
             Hi there!
