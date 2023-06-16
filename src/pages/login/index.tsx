@@ -48,8 +48,7 @@ export const Login: React.FunctionComponent = function () {
       form.setError('password', 'Password field is required');
     }
   });
-  // after:block after:absolute after:inset-y-0 after:right-0 after:w-1/2 after:bg-yankees-blue after:rotate-42
-  // before:block before:absolute before:inset-y-0 before:left-0 before:w-8/12 before:bg-cover before:bg-[url(https://source.unsplash.com/1600x900/?space,star,galaxy)]
+
   return (
     <div
       className="
