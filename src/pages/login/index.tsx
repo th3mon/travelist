@@ -70,12 +70,18 @@ export const Login: React.FunctionComponent = function () {
           left-0
           right-0
           bg-yankees-blue
-          md:w-3/5
-          lg:-right-20
-          lg:w-1/2
-          lg:rotate-10
+          md:bottom-0
+          md:left-1/4
+          md:-right-1/4
+          md:-skew-x-6
       "
-      ></div>
+      >
+        <span
+          className="
+          md:w-3/5
+          "
+        ></span>
+      </div>
       <Form
         className="
           login-form flex flex-col gap-8
