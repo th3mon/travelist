@@ -17,6 +17,20 @@ import {
   StyledPrimaryButton,
 } from '@/components';
 
+const LoginPageBackgroundPicture: () => JSX.Element = () => (
+  <div
+    className="
+          login-page__picture
+          block absolute bg-cover bg-[url(https://source.unsplash.com/1600x900/?space,star,galaxy)]
+          bottom-0 top-0 left-0 right-0
+          z-10
+          lg:inset-y-0
+          lg:left-0
+          lg:w-8/12
+      "
+  ></div>
+);
+
 export const Login: React.FunctionComponent = function () {
   const form = useFormStore({
     defaultValues: {
@@ -48,17 +62,7 @@ export const Login: React.FunctionComponent = function () {
       "
       data-testid="login-page"
     >
-      <div
-        className="
-          login-page__picture
-          block absolute bg-cover bg-[url(https://source.unsplash.com/1600x900/?space,star,galaxy)]
-          bottom-0 top-0 left-0 right-0
-          z-10
-          lg:inset-y-0
-          lg:left-0
-          lg:w-8/12
-      "
-      ></div>
+      <LoginPageBackgroundPicture />
       <div
         className="
           login-page__background
@@ -76,17 +80,11 @@ export const Login: React.FunctionComponent = function () {
           lg:absolute
           xl:left-1/2
       "
-      >
-        <span
-          className="
-          md:w-3/5
-          "
-        ></span>
-      </div>
+      ></div>
       <Form
         className="
           login-form flex flex-col gap-8
-          z-20
+          z-30
           p-5
           pb-10
           bg-yankees-blue
