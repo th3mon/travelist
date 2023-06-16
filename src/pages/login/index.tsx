@@ -74,6 +74,7 @@ export const Login: React.FunctionComponent = function () {
           lg:-right-1/4
           lg:-skew-x-6
           lg:absolute
+          xl:left-1/2
       "
       >
         <span
@@ -98,6 +99,7 @@ export const Login: React.FunctionComponent = function () {
           lg:left-auto
           lg:w-2/3
           lg:translate-x-[auto]
+          xl:w-2/5
         "
         store={form}
         aria-labelledby="sign-in-into-the-app"
