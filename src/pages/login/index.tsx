@@ -63,17 +63,17 @@ export const Login: React.FunctionComponent = function () {
         className="
           login-page__background
           block
-          lg:absolute
           z-20
           top-0
           bottom-1/4
           left-0
           right-0
           bg-yankees-blue
-          md:bottom-0
-          md:left-1/4
-          md:-right-1/4
-          md:-skew-x-6
+          lg:bottom-0
+          lg:left-1/4
+          lg:-right-1/4
+          lg:-skew-x-6
+          lg:absolute
       "
       >
         <span
