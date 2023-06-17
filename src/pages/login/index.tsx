@@ -17,19 +17,18 @@ import {
   StyledPrimaryButton,
 } from '@/components';
 
-const LoginPageBackgroundPicture: () => JSX.Element = () => (
-  <div
-    className="
-      login-page__picture
-      block absolute bg-cover bg-[url(https://source.unsplash.com/1600x900/?space,star,galaxy)]
-      bottom-0 top-0 left-0 right-0
-      z-10
-      lg:inset-y-0
-      lg:left-0
-      lg:w-8/12
-    "
-  ></div>
-);
+const LoginPageBackgroundPicture: () => JSX.Element = () => {
+  const mainClassName = 'login-page__picture';
+  const background: string[] = [
+    'bg-cover',
+    'bg-[url(https://source.unsplash.com/1600x900/?space,star,galaxy)]',
+  ];
+  const position: string[] = ['absolute', 'bottom-0', 'top-0', 'left-0', 'right-0', 'z-10'];
+  const lg: string[] = ['lg:inset-y-0', 'lg:left-0', 'lg:w-8/12'];
+  const classNames: string = [mainClassName, ...background, ...position, ...lg].join(' ');
+
+  return <div className={classNames} />;
+};
 
 const LoginPageBackground: () => JSX.Element = () => (
   <div
