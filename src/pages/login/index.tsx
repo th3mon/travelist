@@ -30,26 +30,22 @@ const LoginPageBackgroundPicture: () => JSX.Element = () => {
   return <div className={classNames} />;
 };
 
-const LoginPageBackground: () => JSX.Element = () => (
-  <div
-    className="
-      login-page__background
-      block
-      z-20
-      top-0
-      bottom-1/4
-      left-0
-      right-0
-      bg-yankees-blue
-      lg:bottom-0
-      lg:left-1/4
-      lg:-right-1/4
-      lg:-skew-x-6
-      lg:absolute
-      xl:left-1/2
-    "
-  ></div>
-);
+const LoginPageBackground: () => JSX.Element = () => {
+  const mainClassName = 'login-page__background';
+  const background = 'bg-yankees-blue';
+  const position: string[] = ['z-20', 'top-0', 'bottom-1/4', 'left-0', 'right-0'];
+  const lg: string[] = [
+    'lg:absolute',
+    'lg:bottom-0',
+    'lg:left-1/4',
+    'lg:-right-1/4',
+    'lg:-skew-x-6',
+  ];
+  const xl = 'xl:left-1/2';
+  const classNames: string = [mainClassName, background, ...position, ...lg, xl].join(' ');
+
+  return <div className={classNames} />;
+};
 
 export const Login: React.FunctionComponent = function () {
   const form = useFormStore({
