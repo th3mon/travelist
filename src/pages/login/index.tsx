@@ -75,6 +75,10 @@ export const Login: React.FunctionComponent = function () {
     }
   });
 
+  form.useSubmit(state => {
+    console.log(state.values);
+  });
+
   return (
     <div
       className="
