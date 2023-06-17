@@ -20,14 +20,14 @@ import {
 const LoginPageBackgroundPicture: () => JSX.Element = () => (
   <div
     className="
-          login-page__picture
-          block absolute bg-cover bg-[url(https://source.unsplash.com/1600x900/?space,star,galaxy)]
-          bottom-0 top-0 left-0 right-0
-          z-10
-          lg:inset-y-0
-          lg:left-0
-          lg:w-8/12
-      "
+      login-page__picture
+      block absolute bg-cover bg-[url(https://source.unsplash.com/1600x900/?space,star,galaxy)]
+      bottom-0 top-0 left-0 right-0
+      z-10
+      lg:inset-y-0
+      lg:left-0
+      lg:w-8/12
+    "
   ></div>
 );
 
