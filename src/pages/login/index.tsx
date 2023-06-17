@@ -55,6 +55,16 @@ export const Login: React.FunctionComponent = function () {
     },
   });
 
+  const loginFormClassNames = Object.values({
+    main: 'login-page__form',
+    whiteSpace: 'p-5 pb-10',
+    background: 'bg-yankees-blue',
+    flex: 'flex flex-col gap-8',
+    position: 'relative z-30',
+    lg: 'lg:p-0 lg:bg-transparent lg:absolute lg:inset-y-20 lg:right-10 lg:left-auto lg:w-2/3 lg:translate-x-[auto]',
+    lx: 'xl:w-2/5',
+  }).join(' ');
+
   form.useValidate(() => {
     if (!form.getValue('email')) {
       form.setError('email', 'Login field is required');
@@ -80,23 +90,7 @@ export const Login: React.FunctionComponent = function () {
       <LoginPageBackgroundPicture />
       <LoginPageBackground />
       <Form
-        className="
-          login-form flex flex-col gap-8
-          z-30
-          p-5
-          pb-10
-          bg-yankees-blue
-          relative
-          lg:p-0
-          lg:bg-transparent
-          lg:absolute
-          lg:inset-y-20
-          lg:right-10
-          lg:left-auto
-          lg:w-2/3
-          lg:translate-x-[auto]
-          xl:w-2/5
-        "
+        className={loginFormClassNames}
         store={form}
         aria-labelledby="sign-in-into-the-app"
         data-testid="login-form"
